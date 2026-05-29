@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthTech Ops CRM • SF Early Stage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --bg: #f4f1e9;
+            --card: #f8f5ee;
+            --border: #d4c9b0;
+            --text: #3f3a2f;
+            --accent: #5c5240;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background-color: #f4f1e9;
+            color: #3f3a2f;
+        }
+        
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .retro-header {
+            background: linear-gradient(#f8f5ee, #f4f1e9);
+            border-bottom: 1px solid #d4c9b0;
+        }
+
+        .crm-table {
+            border: 1px solid #d4c9b0;
+            background: #f8f5ee;
+        }
+
+        .crm-table th {
+            background: #e8e0d0;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .lead-card {
+            background: #f8f5ee;
+            border: 1px solid #d4c9b0;
+            transition: all 0.1s ease;
+        }
+
+        .lead-card:hover {
+            border-color: #a89c7d;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .status-pill {
+            font-size: 10px;
+            padding: 1px 8px;
+            border-radius: 9999px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .section-header {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #5c5240;
+        }
+
+        .old-web {
+            box-shadow: 0 1px 0 #d4c9b0, 0 -1px 0 #d4c9b0;
+        }
+    </style>
+</head>
+<body class="bg-[#f4f1e9] text-[#3f3a2f]">
+    <!-- Header -->
+    <div class="border-b border-[#d4c9b0] bg-[#f8f5ee]">
+        <div class="max-w-7xl mx-auto px-8 py-5">
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-8 h-8 bg-[#5c5240] flex items-center justify-center">
+                            <span class="text-[#f4f1e9] text-xl font-bold mono">H</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-xl tracking-tight">HealthTech Ops CRM</span>
+                            <span class="text-[#8a7f60] text-sm ml-2">San Francisco • Early Stage</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-4 text-sm">
+                    <div class="px-3 py-1 bg-[#e8e0d0] border border-[#d4c9b0] text-[#5c5240]">
+                        <span class="mono">4 leads</span>
+                    </div>
+                    <div class="text-[#8a7f60]">
+                        Updated: <span class="mono">Jan 29, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 py-8">
+        
+        <!-- Summary -->
+        <div class="mb-8">
+            <div class="flex items-end gap-x-3 mb-2">
+                <div class="section-header">OVERVIEW</div>
+            </div>
+            <div class="text-[#5c5240] max-w-2xl">
+                Early-stage healthtech companies in San Francisco actively hiring operations roles 
+                (founding ops, ops associate, operations coordinator). Focused on companies under Series B.
+            </div>
+        </div>
+
+        <!-- Leads Table -->
+        <div class="mb-10">
+            <div class="flex items-center justify-between mb-3">
+                <div class="section-header">ACTIVE LEADS</div>
+                <div class="text-xs text-[#8a7f60]">Click company name for X profile</div>
+            </div>
+            
+            <table class="w-full crm-table text-sm">
+                <thead>
+                    <tr>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Company</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Focus Area</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Stage</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Hiring Role</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Location</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Link</th>
+                        <th class="text-left px-4 py-3 border-b border-[#d4c9b0]">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#d4c9b0]">
+                    
+                    <!-- Holly Handles It -->
+                    <tr class="hover:bg-[#f0ebdf]">
+                        <td class="px-4 py-4 font-medium">
+                            <a href="https://x.com/hollyhandlesit" target="_blank" class="hover:underline">Holly Handles It</a>
+                        </td>
+                        <td class="px-4 py-4 text-[#5c5240]">AI workforce management for healthcare operations</td>
+                        <td class="px-4 py-4"><span class="px-2 py-0.5 bg-[#e8e0d0] text-xs">Seed / Series A</span></td>
+                        <td class="px-4 py-4 text-[#5c5240]">Founding operators + engineers</td>
+                        <td class="px-4 py-4">San Francisco</td>
+                        <td class="px-4 py-4">
+                            <a href="https://x.com/akcushman/status/1978671596215628278" target="_blank" 
+                               class="text-[#5c5240] hover:text-[#3f3a2f] underline text-xs">Post ↗</a>
+                        </td>
+                        <td class="px-4 py-4">
+                            <span class="status-pill bg-emerald-100 text-emerald-700">Active</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- Therapist Platform -->
+                    <tr class="hover:bg-[#f0ebdf]">
+                        <td class="px-4 py-4 font-medium">
+                            <span class="text-[#8a7f60]">Therapist Practice Platform</span>
+                            <span class="text-[10px] text-[#a89c7d]">(unnamed)</span>
+                        </td>
+                        <td class="px-4 py-4 text-[#5c5240]">Platform for PT/OT/speech therapists to launch & run practices</td>
+                        <td class="px-4 py-4"><span class="px-2 py-0.5 bg-[#e8e0d0] text-xs">Seed</span></td>
+                        <td class="px-4 py-4 text-[#5c5240]"><strong>Founding Operations Lead</strong></td>
+                        <td class="px-4 py-4">San Francisco</td>
+                        <td class="px-4 py-4">
+                            <a href="https://x.com/hirevouch/status/2016149475140464999" target="_blank" 
+                               class="text-[#5c5240] hover:text-[#3f3a2f] underline text-xs">Post ↗</a>
+                        </td>
+                        <td class="px-4 py-4">
+                            <span class="status-pill bg-emerald-100 text-emerald-700">Active</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- Stealth Care Coordination -->
+                    <tr class="hover:bg-[#f0ebdf]">
+                        <td class="px-4 py-4 font-medium">
+                            <span class="text-[#8a7f60]">Stealth Care Coordination OS</span>
+                        </td>
+                        <td class="px-4 py-4 text-[#5c5240]">AI operating system for healthcare care coordination</td>
+                        <td class="px-4 py-4"><span class="px-2 py-0.5 bg-[#e8e0d0] text-xs">Stealth (Seed)</span></td>
+                        <td class="px-4 py-4 text-[#5c5240]">Founding engineers (ops potential)</td>
+                        <td class="px-4 py-4">San Francisco (assumed)</td>
+                        <td class="px-4 py-4">
+                            <a href="https://x.com/nazzari/status/2024551493869981873" target="_blank" 
+                               class="text-[#5c5240] hover:text-[#3f3a2f] underline text-xs">Post ↗</a>
+                        </td>
+                        <td class="px-4 py-4">
+                            <span class="status-pill bg-amber-100 text-amber-700">Stealth</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- OpturaAI -->
+                    <tr class="hover:bg-[#f0ebdf]">
+                        <td class="px-4 py-4 font-medium">
+                            <a href="https://x.com/1752vc/status/2060052388812374161" target="_blank" class="hover:underline">OpturaAI</a>
+                        </td>
+                        <td class="px-4 py-4 text-[#5c5240]">AI orchestration for large healthcare organizations</td>
+                        <td class="px-4 py-4"><span class="px-2 py-0.5 bg-[#e8e0d0] text-xs">Early</span></td>
+                        <td class="px-4 py-4 text-[#5c5240]">Various (ops mentioned in roundups)</td>
+                        <td class="px-4 py-4">San Francisco</td>
+                        <td class="px-4 py-4">
+                            <a href="https://x.com/1752vc/status/2060052388812374161" target="_blank" 
+                               class="text-[#5c5240] hover:text-[#3f3a2f] underline text-xs">Post ↗</a>
+                        </td>
+                        <td class="px-4 py-4">
+                            <span class="status-pill bg-emerald-100 text-emerald-700">Active</span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <div>
+                <div class="section-header mb-3">NOTES & CONTEXT</div>
+                <div class="lead-card p-5 text-sm space-y-4">
+                    <div>
+                        <div class="font-medium mb-1">Holly Handles It</div>
+                        <div class="text-[#5c5240]">Strongest signal. Founders moved to SF, raised recently, explicitly hiring operators alongside engineers. Healthcare ops AI angle is very relevant.</div>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-1">Therapist Platform</div>
+                        <div class="text-[#5c5240]">Posted by @hirevouch. Very early ops role (Founding Operations Lead). Good fit for someone who wants broad ownership at seed stage.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section-header mb-3">NEXT ACTIONS</div>
+                <div class="lead-card p-5 text-sm space-y-3">
+                    <div class="flex gap-x-3">
+                        <div class="w-5 text-[#8a7f60]">→</div>
+                        <div>DM @akcushman or @leannhaddad about Holly Handles It ops roles</div>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <div class="w-5 text-[#8a7f60]">→</div>
+                        <div>Reach out to @hirevouch for therapist platform intro</div>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <div class="w-5 text-[#8a7f60]">→</div>
+                        <div>Follow @nazzari for more stealth healthtech SF opportunities</div>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <div class="w-5 text-[#8a7f60]">→</div>
+                        <div>Monitor @1752vc and @nextplayso for healthtech hiring roundups</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-[#d4c9b0] text-xs text-[#8a7f60]">
+            Data sourced from X posts (Jan 2025 – Jan 2026). Most healthtech ops hiring happens off-platform (LinkedIn, Wellfound). 
+            This is a lightweight view for quick reference.
+        </div>
+        
+    </div>
+    
+    <script>
+        // Simple keyboard shortcut to copy table
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                e.preventDefault();
+                window.location.reload();
+            }
+        });
+        
+        console.log('%c[CRM] HealthTech Ops dashboard loaded', 'color:#8a7f60');
+    </script>
+</body>
+</html>
